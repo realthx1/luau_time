@@ -1,5 +1,5 @@
 name = "realthx1/luau_time"
-version = "0.1.0"
+version = "0.1.1"
 description = "Time-related structures and utilities."
 authors = ["realthx1"]
 repository = "https://github.com/realthx1/luau_time"

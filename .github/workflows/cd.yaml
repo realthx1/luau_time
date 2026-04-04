@@ -39,7 +39,7 @@ jobs:
       - name: Checkout Project
         uses: actions/checkout@v5
 
-      - name: Download luau_time Build
+      - name: Download Build
         uses: actions/download-artifact@v6
         with:
           name: build

@@ -8,4 +8,6 @@ local mod = {}
 
 mod.time = time_mod
 
+export type Time = time_mod.Time
+
 return mod
