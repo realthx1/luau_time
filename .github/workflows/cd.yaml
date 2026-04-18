@@ -49,13 +49,13 @@ jobs:
           path: build
 
       - name: Rename Build
-        run: mv build/build.rbxm jecs_kernel.rbxm
+        run: mv build/build.rbxm luau_time.rbxm
 
       - name: Create Release
         uses: softprops/action-gh-release@v2
         with:
           files: |
-            jecs_kernel.rbxm
+            luau_time.rbxm
 
   publish-pesde:
     name: Publish-Pesde
