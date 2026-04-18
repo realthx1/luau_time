@@ -5,4 +5,8 @@
   },
   "lintErrors": false,
   "typeErrors": true,
+  "aliases": {
+    "luau_time": "../src",
+    "pkg": "../roblox_packages"
+  }
 }

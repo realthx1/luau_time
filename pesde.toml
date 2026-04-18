@@ -1,6 +1,6 @@
 name = "realthx1/luau_time"
-version = "0.1.1"
-description = "Time-related structures and utilities."
+version = "0.2.0"
+description = "Time-related structs and utilities for Luau designed for ECS."
 authors = ["realthx1"]
 repository = "https://github.com/realthx1/luau_time"
 license = "MIT"
@@ -22,9 +22,6 @@ sourcemap_generator = ".pesde/scripts/sourcemap_generator.luau"
 [dev_dependencies]
 scripts = { name = "pesde/scripts_rojo", version = "^0.2.0", target = "lune" }
 rojo = { name = "pesde/rojo", version = "^7.5.1", target = "lune" }
-selene = { name = "pesde/selene", version = "^0.30.1", target = "lune" }
-luau_lsp = { name = "pesde/luau_lsp", version = "^1.63.0", target = "lune" }
-stylua = { name = "pesde/stylua", version = "^2.3.1", target = "lune" }
 
 [engines]
 pesde = "^0.7.0"

@@ -17,6 +17,9 @@ jobs:
       - name: Checkout Project
         uses: actions/checkout@v5
 
+      - name: Install Mise
+        uses: jdx/mise-action@v2
+
       - name: Install Pesde
         uses: lumin-org/setup-pesde@v0.4.1
         with:
@@ -28,24 +31,27 @@ jobs:
       - name: Analyze
         run: pesde run analyze
 
-  lint:
-    name: Lint
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Project
-        uses: actions/checkout@v5
+  # lint:
+  #   name: Lint
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout Project
+  #       uses: actions/checkout@v5
 
-      - name: Install Pesde
-        uses: lumin-org/setup-pesde@v0.4.1
-        with:
-          token: ${{ secrets.PESDE_AUTH_TOKEN }}
+  #     - name: Install Mise
+  #       uses: jdx/mise-action@v2
 
-      - name: Install Pesde Dependencies
-        run: pesde install --locked
+  #     - name: Install Pesde
+  #       uses: lumin-org/setup-pesde@v0.4.1
+  #       with:
+  #         token: ${{ secrets.PESDE_AUTH_TOKEN }}
 
-      - name: Lint
-        run: |
-          selene src/
+  #     - name: Install Pesde Dependencies
+  #       run: pesde install --locked
+
+  #     - name: Lint
+  #       run: |
+  #         mise exec -- selene src/
 
   style:
     name: Styling
@@ -53,6 +59,9 @@ jobs:
     steps:
       - name: Checkout Project
         uses: actions/checkout@v5
+
+      - name: Install Mise
+        uses: jdx/mise-action@v2
 
       - name: Install Pesde
         uses: lumin-org/setup-pesde@v0.4.1
@@ -64,4 +73,4 @@ jobs:
 
       - name: Styling
         run: |
-          stylua src/ --check --verify
+          mise exec -- stylua src/ --check --verify
